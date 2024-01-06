@@ -1,0 +1,217 @@
+ERROR - 2023-08-02 09:06:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/humansofuganda/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#6 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-02 09:06:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cu_about`
+WHERE `a_title` = :a_title:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 09:29:25 --> mysqli_sql_exception: Table 'humansofuganda_db.cu_about' doesn't exist in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/humansofuganda/public_html/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-02 09:29:25 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH/Model.php on line 250.
+ 1 SYSTEMPATH/BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+ 3 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 09:29:26 --> mysqli_sql_exception: Table 'humansofuganda_db.cu_about' doesn't exist in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/humansofuganda/public_html/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-02 09:29:26 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH/Model.php on line 250.
+ 1 SYSTEMPATH/BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+ 3 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 09:54:20 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'humansofuganda', 3306, '', 0)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/humansofuganda/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#6 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-02 09:54:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cu_about`
+WHERE `a_title` = :a_title:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 09:55:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'humansofuganda', 3306, '', 0)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/humansofuganda/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in /home/humansofuganda/public_html/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/humansofuganda/public_html/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/humansofuganda/public_html/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/humansofuganda/public_html/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/humansofuganda/public_html/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/humansofuganda/public_html/system/BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 /home/humansofuganda/public_html/app/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+#6 /home/humansofuganda/public_html/system/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 /home/humansofuganda/public_html/system/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 /home/humansofuganda/public_html/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/humansofuganda/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-02 09:55:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cu_about`
+WHERE `a_title` = :a_title:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/BaseController.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 12:14:06 --> Trying to access array offset on value of type null
+in APPPATH/Views/frontend/home/story.php on line 6.
+ 1 APPPATH/Views/frontend/home/story.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Views/frontend/home/story.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/frontend/home/story.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('frontend/home/story', [], true)
+ 5 APPPATH/Controllers/Home.php(111): view('frontend/home/story', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 12:42:22 --> Trying to access array offset on value of type null
+in APPPATH/Views/frontend/home/story.php on line 6.
+ 1 APPPATH/Views/frontend/home/story.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Views/frontend/home/story.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/frontend/home/story.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('frontend/home/story', [], true)
+ 5 APPPATH/Controllers/Home.php(111): view('frontend/home/story', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 13:48:23 --> Trying to access array offset on value of type null
+in APPPATH/Views/frontend/home/story.php on line 6.
+ 1 APPPATH/Views/frontend/home/story.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Views/frontend/home/story.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/frontend/home/story.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('frontend/home/story', [], true)
+ 5 APPPATH/Controllers/Home.php(111): view('frontend/home/story', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 15:16:21 --> Trying to access array offset on value of type null
+in APPPATH/Views/frontend/home/story.php on line 6.
+ 1 APPPATH/Views/frontend/home/story.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Views/frontend/home/story.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/frontend/home/story.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('frontend/home/story', [], true)
+ 5 APPPATH/Controllers/Home.php(111): view('frontend/home/story', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()

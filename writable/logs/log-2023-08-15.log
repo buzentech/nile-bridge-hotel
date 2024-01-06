@@ -1,0 +1,21 @@
+CRITICAL - 2023-08-15 10:47:07 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Home.php on line 81.
+ 1 APPPATH/Controllers/Home.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Home.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-15 11:01:16 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Home.php on line 81.
+ 1 APPPATH/Controllers/Home.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Home.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-15 14:27:33 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Home.php on line 81.
+ 1 APPPATH/Controllers/Home.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Home.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Home->story('tweets.json')
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
