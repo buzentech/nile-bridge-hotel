@@ -37,11 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('gallery', 'Home::gallery');
-// $routes->get('series', 'Home::series');
-// $routes->get('about', 'Home::about');
-// $routes->get('story/(:any)', 'Home::story/$1');
-// $routes->get('serie/(:any)', 'Home::serie/$1');
-// $routes->get('seriesStory/(:any)/(:any)', 'Home::seriesstory/$1/$2');
+$routes->post('send-mail', 'Home::SendContactMail');
 
 // $routes->get('serie', 'Home::serie');
 // $routes->post('subscribe', 'Home::subscribe');

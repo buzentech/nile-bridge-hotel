@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <a href="https://wa.me/256757550874"
+            <a href="https://wa.me/256757550874" target="_blank"
               ><p>
                 <span style="font-weight: bold">Whatsapp Us:</span
                 ><span
@@ -57,10 +57,11 @@
           <!--Grid column-->
           <div class="col-md-2"></div>
           <div class="col-md-8 nile-form">
+          <div id="mailmessage"></div>
             <form
               id="contact-form"
               name="contact-form"
-              action="mail.php"
+              action="#"
               method="POST"
             >
               <!--Grid row-->
@@ -137,20 +138,12 @@
                 <!--Grid column-->
                 <div class="col-md-12">
                   <div class="md-form">
-                    <input style="background-color: #3c0008 !important; color:white !important; font-size: 18px !important" value="Send" type="submit" class="form-control btn-contact"  ></input>
+                    <input style="background-color: #3c0008 !important; color:white !important; font-size: 18px !important" value="Send" type="submit" class="form-control btn-contact"  />
                   </div>
                 </div>
               </div>
               <!--Grid row-->
             </form>
-
-            <!-- <div class="text-center text-md-left">
-              <a
-                class="col-md-12 btn-contact btn btn-primary"
-                onclick="document.getElementById('contact-form').submit();"
-                ></a
-              >
-            </div> -->
             <div class="status"></div>
           </div>
           <div class="col-md-2"></div>
@@ -201,7 +194,7 @@
           padding: 10px;
         "
         href="https://wa.me/256757550874"
-        class="d-flex"
+        class="d-flex" target="_blank"
         ><span class="fa fa-whatsapp"><i class="sr-only">Whatsapp</i></span></a
       >
       <!-- <a
@@ -227,6 +220,13 @@
     </div>
 
     <div class="footer"></div>
+
+    
+    <script src="<?= base_url(); ?>/public/assets/js/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/popper.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/main.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/lightbox.min.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -254,6 +254,45 @@
             );
           } // End if
         });
+
+        $('#contact-form').submit(function(e){
+					e.preventDefault();
+					$.ajax({
+						type: "POST",
+						url: "<?= site_url('send-mail'); ?>",
+						data: new FormData(this),
+						contentType: false,
+						processData: false,
+						cache: false,
+						// async: false,
+						dataType: "json",
+						beforeSend: function() {
+							// blockUI.block();
+              $('#mailmessage').html('<div class="text-center alert alert-info">Sending...</div>');
+						},
+						success: function(response) {
+							// blockUI.release();
+							var success = response.success;
+							if (success == 1) {
+								// toastr.success(response.message, response.title);
+                $('#mailmessage').html('<div class="text-center alert alert-success">'+response.message+'</div>');
+								setTimeout(function() {
+									document.location = '<?= current_url(); ?>';
+								}, 2000);
+							} else {
+								//Show error message
+								// toastr.error(response.message, response.title);
+                $('#mailmessage').html('<div class="text-center alert alert-danger">'+response.message+'</div>');
+							}
+						},
+						error: function(){
+							// blockUI.release();
+							// Show error message
+							// toastr.error("Unable to process request", "Error");
+              $('#mailmessage').html('<div class="text-center alert alert-danger">Unable to send message check configurations</div>');
+						}
+					});
+				});
       });
     </script>
 
@@ -285,10 +324,5 @@
         });
       }
     </script>
-    <script src="<?= base_url(); ?>/public/assets/js/jquery.min.js"></script>
-    <script src="<?= base_url(); ?>/public/assets/js/popper.js"></script>
-    <script src="<?= base_url(); ?>/public/assets/js/bootstrap.min.js"></script>
-    <script src="<?= base_url(); ?>/public/assets/js/main.js"></script>
-    <script src="<?= base_url(); ?>/public/assets/js/lightbox.min.js"></script>
   </body>
 </html>

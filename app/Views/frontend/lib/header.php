@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="<?= $desc; ?>,<?= $title; ?>, NILE BRIDGE HOTEL - Relax in style, Retire to serenity">
+    <meta name="keywords" content="<?= $name; ?>,<?= $desc; ?>, NILE BRIDGE HOTEL - Relax in style, Retire to serenity">
+    <meta name="author" content="<?= $name; ?>, NILE BRIDGE HOTEL - Relax in style, Retire to serenity">
+
     <title><?=$title;?> | Nile Bridge Hotel</title>
+    <!-- Standard Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>/public/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>/public/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/public/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?= base_url() ?>/public/assets/favicon//site.webmanifest">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta property="og:image" content="<?= $img; ?>" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nilebridgehotel">
+    <meta name="twitter:url" content="<?= $route; ?>">
+    <meta name="twitter:title" content="<?= $name; ?>">
+    <meta name="twitter:description" content="<?= $desc; ?>">
+    <meta name="twitter:image" content="<?= $img; ?>">
     <meta charset="utf-8" />
     <meta
       name="viewport"

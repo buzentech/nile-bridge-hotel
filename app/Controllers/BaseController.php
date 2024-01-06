@@ -9,6 +9,8 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Models\HomeModel;
+
 /**
  * Class BaseController
  *
@@ -34,14 +36,7 @@ abstract class BaseController extends Controller
     protected $seo_description;
     protected $sitename;
 
-    protected $storiesModel;
-    protected $seriesModel;
-    protected $aboutModel;
-
-    protected $twitter;
-    protected $facebook;
-
-    protected $subscribeModel;
+    protected $homeModel;
 
 
     /**
@@ -69,6 +64,8 @@ abstract class BaseController extends Controller
         $this->seo_image = base_url() . "/public/assets/images/logo.jpg";
         $this->seo_description = 'Nile Bridge Hotel, Best Hotel in Uganda, Along the Nile.';
         $this->sitename = 'Nile Bridge Hotel';
+
+        $this->homeModel = new HomeModel();
 
     }
 
