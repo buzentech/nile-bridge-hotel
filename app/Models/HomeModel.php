@@ -24,7 +24,7 @@ class HomeModel extends Model
             return true;
         } else if (filter_var($Nemail, FILTER_VALIDATE_EMAIL)) {
             $mail = \Config\Services::email();
-            $to = 'nilebridgehotel@gmail.com';
+            $to = 'adongot.robert@gmail.com';
             $mail->setTo($to);
             $mail->setSubject($Nsubject);
             $mail->setFrom('buzen.mailer@gmail.com', 'NILE BRIDGE HOTEL WEBSITE');

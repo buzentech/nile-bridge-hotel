@@ -28,21 +28,25 @@ class Email extends BaseConfig
     /**
      * SMTP Server Address
      */
-    public string $SMTPHost = 'smtp.googlemail.com';
+    public string $SMTPHost = 'mail.nilebridgehoteljinja.com';
+    // public string $SMTPHost = 'smtp.googlemail.com';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'buzen.mailer@gmail.com';
+    public string $SMTPUser = 'notifications@nilebridgehoteljinja.com';
+    // public string $SMTPUser = 'buzen.mailer@gmail.com';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'lmiz hlvc julr wupu';
+    public string $SMTPPass = '=GAnrU&mS0gN*5~22#';
+    // public string $SMTPPass = 'lmiz hlvc julr wupu';
 
     /**
      * SMTP Port
      */
+    // public int $SMTPPort = 587;
     public int $SMTPPort = 465;
 
     /**
@@ -58,7 +62,7 @@ class Email extends BaseConfig
     /**
      * SMTP Encryption. Either tls or ssl
      */
-    public string $SMTPCrypto = 'ssl';
+    public string $SMTPCrypto = 'tls';
 
     /**
      * Enable word-wrap
